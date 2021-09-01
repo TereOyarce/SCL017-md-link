@@ -1,1 +1,10 @@
-hola juan carlos como estas chupapija
+* [1. Preámbulo](#1-preámbulo)
+* [2. Resumen del proyecto](#2-resumen-del-proyecto)
+* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
+
+### Otros recursos
+
+* [Acerca de Node.js - Documentación oficial](https://nodejs.org/es/about/)
+* [Node.js file system - Documentación oficial](https://nodejs.org/api/fs.html)
+* [Node.js http.get - Documentación oficial](https://nodejs.org/api/http.html#http_http_get_options_callback)
+* [Node.js - Wikipedia](https://es.wikipedia.org/wiki/Node.js)

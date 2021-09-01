@@ -1,25 +1,40 @@
 const fs = require('fs');
 const path = require('path');
 const mdLinkExtractor = require('markdown-link-extractor');
-const filePath = 'C:/Users/Tere/Desktop/laboratoria/SCL017-md-link/README.md'
+const filePath = 'C:/Users/Tere/Desktop/laboratoria/SCL017-md-link/prueba.md'
 const file = fs.readFileSync(filePath, 'utf8');
 
 //Corroborar si es archivo o directorio
-stats = fs.statSync("README.md");
+stats = fs.statSync("prueba.md");
 console.log("Path is file:", stats.isFile());
 console.log("Path is directory:", stats.isDirectory());
 
 
 //Devolver links
+
+
 const markdown = file;
 try {
   const links = mdLinkExtractor(markdown, false);
-  links.forEach(link => console.log(link));
+
+
+  const urlRegex = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+  const linksFilter = links.filter(link => link.match(urlRegex));
+  console.log(linksFilter);
+
+
   const details = mdLinkExtractor(markdown, true);
-  details.forEach(detail => console.log(detail));
+  console.log(details);
+  //details.forEach(detail => console.log(detail));
+  // const detailsFilter = details.filter(detail => detail == linksFilter);
+  //console.log(detailsFilter);
+  //OLA DIOS SOY IO DE NUEVO
+
 } catch (err) {
   console.log(err);
 }
+
+
 
 
 
